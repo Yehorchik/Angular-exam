@@ -1,0 +1,12 @@
+<a [routerLink]="['/pets']">Home</a>
+<h3 class="detail">Details about {{pet.name}}</h3>
+<hr>
+<h2>Pet Type : {{pet.type}}</h2>
+<hr>
+<h2>Description :{{pet.description}} </h2>
+<hr>
+<h2>Skills:</h2>
+<h2 *ngFor='let skill of pet.skills'>{{skill.skillfirst}} <br> {{skill.skillsecond}} <br> {{skill.skillthird}}</h2>
+
+<input [routerLink]="['']"  (click)='deletePet(pet._id)' type="submit" value="Adopt this pet!">
+

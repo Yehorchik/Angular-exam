@@ -1,0 +1,27 @@
+<p>Edit this pet</p>
+<div *ngIf="createErrors">
+  <p *ngIf="createErrors.errors.name" style="color:red">{{createErrors.errors.name.message}}</p>
+  <p *ngIf="createErrors.errors.type" style="color:red">{{createErrors.errors.type.message}}</p>
+  <p *ngIf="createErrors.errors.description" style="color:red">{{createErrors.errors.description.message}}</p>
+</div>
+<div class="table">
+<p>Pet name : </p>
+<input type="text" name="pet.name" [(ngModel)]="pet.name">
+<br>
+<p>Pet type: </p>
+<input type="text" name="pet.type" [(ngModel)]="pet.type">
+<br>
+<p>Decription: </p>
+<input type="text" name="pet.description" [(ngModel)]="pet.description">
+<br>
+<h2>Skills (optional): </h2>
+    <p>Skill 1 :</p>
+    <input type="text" name="pet.skills[0].skillfirst" [(ngModel)]="pet.skills[0].skillfirst">
+    <p>Skill 2 :</p>
+    <input type="text" name="pet.skills[0].skillsecond" [(ngModel)]="pet.skills[0].skillsecond">
+    <p>Skill 3 :</p>
+    <input type="text" name="pet.skills[0].skillthird" [(ngModel)]="pet.skills[0].skillthird">
+<br>
+<input  [routerLink]="['/pets']" type="Submit"  value='Cancel'>
+<input  (click)='updatePet(pet._id,pet)' type="submit" value="Edit pet" >
+</div>

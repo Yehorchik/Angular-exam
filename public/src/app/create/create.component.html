@@ -1,0 +1,27 @@
+ <p>You know the pet which need a home??</p>
+ <div *ngIf="createErrors">
+  <p *ngIf="createErrors.errors.name" style="color:red">{{createErrors.errors.name.message}}</p>
+  <p *ngIf="createErrors.errors.type" style="color:red">{{createErrors.errors.type.message}}</p>
+  <p *ngIf="createErrors.errors.description" style="color:red">{{createErrors.errors.description.message}}</p>
+</div>
+<div class="table">
+<p>Pet name : </p>
+<input type="text" name="newPet.name" [(ngModel)]="newPet.name">
+<br>
+<p>Pet type: </p>
+<input type="text" name="newPet.type" [(ngModel)]="newPet.type">
+<br>
+<p>Decription: </p>
+<input type="text" name="newPet.description" [(ngModel)]="newPet.description">
+<br>
+<h2>Skills: </h2>
+     <p>Skill 1 :</p>
+     <input type="text" name="newPet.skills.skillfirst" [(ngModel)]="newPet.skills.skillfirst">
+     <p>Skill 2 :</p>
+     <input type="text" name="newPet.skills.skillsecond" [(ngModel)]="newPet.skills.skillsecond">
+     <p>Skill 3 :</p>
+     <input type="text" name="newPet.skills.skillthird" [(ngModel)]="newPet.skills.skillthird">
+<br>
+<input [routerLink]="['/pets']" type="Submit"  value='Cancel'>
+<input (click)='addPet()'  type="submit" value="Add pet"  >
+</div>

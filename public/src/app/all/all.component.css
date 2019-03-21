@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    width: 400px;
+    height: 250px;
+    border: 2px solid orange;
+    overflow-y: scroll;
+}
+th{
+    width: 200px;
+    border: 1px solid black;
+}
+td{
+    height: 50px;
+    border: 1px solid black;
+    text-align: center;
+}
+button{
+    margin: 10px;
+}
+.delete{
+    color: white;
+    background-color: red;
+}
+.update{
+    color: white;
+    background-color: green;
+}
+.view{
+    background-color: orange;
+}
